@@ -1,0 +1,815 @@
+/* Police */
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+
+/* Mise-en-page */
+html {
+    margin: -8px;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Krona One', sans-serif !important;
+}
+
+a {
+    text-decoration: none;
+    color: #F26351;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #FD4843;
+    font-family: 'Concert One' !important;
+    text-transform: uppercase;
+}
+
+h1:hover,
+.fa-magnifying-glass:hover {
+    color: #FAB471;
+}
+
+.btnFinCT {
+    background-color: #F26351;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 3%;
+}
+
+.btnFin {
+    display: inline-block;
+    border: solid 1px #F26351;
+    border-radius: 30px;
+    background-color: #FAB471;
+    padding: 10px 30px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: .8em;
+    transform: translate(-10px, -10px);
+    transition: all .3s;
+    position: relative;
+}
+
+.btnFin:hover {
+    transform: translate(0px, 0px);
+}
+
+
+
+
+
+
+
+
+/* Header encart titre  */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    padding: 0 2%;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+
+/* Ancien bouton : */
+/* .boutonCTA {
+    background-color: #FD4843;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.3vw;
+    padding: 1vh 2vw;
+    border: solid 1% #FD4843;
+    border-radius: 50px;
+    text-align: center;
+} */
+
+/* .boutonCTA:hover {
+    background-color: #FAB471;
+    color: #FD4843;
+} */
+
+.boutonCTA {
+    position: relative;
+    width: 20vw;
+    height: 3em;
+}
+
+.boutonCTA a {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    font-size: 1.4vw;
+    padding: 0 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d4a4969;
+    box-shadow: 0 8px 20px #f2645181;
+    border-top: 2px solid #f26451a6;
+    border-bottom: 1px solid #f26451a6;
+    border-radius: 30px;
+    /* pour le blur du backgroung pour faire du flou sur le before : */
+    backdrop-filter: blur(10px);
+}
+
+.boutonCTA:hover a {
+    position: absolute;
+    color: #fab371d0;
+    text-align: center;
+    transition-delay: .15s;
+    letter-spacing: 1.3px;
+    transition: .3s ease-in-out .1s;
+}
+
+/* L'effet en dessous du before */
+.boutonCTA:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 30%;
+    height: 30%;
+    background-color: #f26451d3;
+    border-radius: 50%;
+    transition: .3s ease-in-out .1s;
+}
+
+.boutonCTA:hover:before {
+    bottom: 10px;
+    height: 50%;
+    width: 85%;
+    transition: .5s;
+}
+
+
+/* Bouton de recherche */
+
+.loupe {
+    height: 2.5em;
+    background-color: #4d4a4969;
+    box-shadow: 0 8px 20px #f2645181;
+    border-top: 2px solid #f26451a6;
+    border-bottom: 1px solid #f26451a6;
+    border-radius: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.loupe>a {
+    color: #F26351;
+    float: right;
+    width: 3vw;
+    padding-right: .3vw;
+    display: flex;
+    justify-content: center;
+    /* transition: .4s; */
+}
+
+input {
+    width: 0;
+    border: none;
+    outline: none;
+    /* pour supprimer les bordures qui apparaissent quand on clique sur le champs de recherche pour rentrer ses données. */
+    background: none;
+    font-size: 1em;
+    transition: .5s ease-in-out;
+}
+
+.loupe:hover>input {
+    width: 7vw;
+    padding-left: 8%;
+}
+
+.loupe i:hover {
+    color: #F26351;
+}
+
+
+
+
+
+
+
+
+
+
+/* section 1: vidéo */
+.accueil {
+    margin: 0;
+}
+
+.video {
+    width: 100%;
+    position: relative;
+}
+
+.rectangle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.532);
+    color: #FAB471;
+    display: grid;
+    align-items: center;
+}
+
+.rectangle p,
+.rectancgle div {
+    font-size: 2vw;
+    text-align: center;
+    font-weight: 600;
+    padding: 0 2%;
+    color: #F26351;
+}
+
+.jaune p {
+    color: #FDE382;
+    height: 1.5vh;
+}
+
+.barre {
+    position: relative;
+}
+
+.barre:after {
+    content: '';
+    position: absolute;
+    background-color: #F26351;
+    height: .4vh;
+    width: 5vw;
+    display: inline-block;
+    right: 18%;
+    transform-origin: left;
+    transform: rotate(160deg);
+}
+
+
+
+
+
+
+
+
+/* section 2: navigation : date et menu */
+
+.nav {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Date */
+
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    transform-style: preserve-3d;
+    /* Porpriété expérimentale. Permet de mettre dans un espace tridimentionnel et doit être définie sur tous les descendants de l'élément.
+    Indique que les fils de l'éléments, concernés par la mise en forme, doivent être positionnés dans l'espace tridimensionnel. */
+    column-gap: 1vw;
+    /* espace entre les cubes */
+    transform: rotateY(30deg) rotateX(25deg);
+    /* Pour mettre les chiffres sur le coté, de profil */
+}
+
+.date .chiffre {
+    position: relative;
+    min-width: 100px;
+    min-height: 100px;
+    transform-style: preserve-3d;
+    transition: 1.7s ease-in-out;
+    transition-delay: calc(.1s * var(--j));
+    /* Animation en décalage .1s par cube (variable j), en décalé */
+    /* Var sur le j car ce sont les chiffres qui bougent */
+}
+
+.chiffre span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#FAB471, #F26351);
+    /* 1er partie du cube, la face est faite avec la taille et la couleur */
+    border: solid .5px #FAB471;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    color: #fff;
+    transform-style: preserve-3d;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+    /* 2eme partie : le cube est fait */
+    /* Var sur le i car ce sont les spans qui bougent */
+}
+
+/* animation simple au hover  */
+.date:hover .chiffre {
+    transform: rotateX(540deg);
+    transform-style: preserve-3d;
+    /* Attention, le nombre de degré est important pour tomber sur les bons chiffre.
+    Si 360deg, on retombe sur les chiffres de bas, nous on veut la date donc on va le faire tourner un peu plus loin,
+    soit avec 90deg de plus. */
+}
+
+.date .chiffre:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: solid .5px #FAB471;
+    background: linear-gradient(#F26351, #FAB471);
+    transform-origin: left;
+    transform: rotateY(90deg) translateX(-50%);
+    /* 2ème étape du cube : Finition du cube (les cotés) */
+}
+
+.chiffre .mois {
+    color: #000;
+}
+
+
+/* Menu */
+
+.menu {
+    position: relative;
+    width: 45%;
+    min-height: 70vh;
+    padding-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    font-size: 3vw;
+    margin: 5% 0;
+}
+
+li a:hover {
+    transform: translateY(-20px);
+    color: rgb(15, 15, 15);
+    /* pour faire presque disparaitre le titre au hover */
+    transition: .4s ease-in-out;
+}
+
+li a:before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -20px;
+    /* pointer-events: none; */
+    /* z-index: 1; */
+    font-size: 1vw;
+    color: #FAB471;
+    letter-spacing: 100px;
+    opacity: 0;
+    /* Pour cache les text en before */
+    transition: .6s ease-in-out;
+    text-shadow: 0 0 10px #F26351, 0 0 50px #F26351, 0 0 80px #F26351;
+    /* Pour différents angles */
+}
+
+/* On change le before quand on passe en hover sur a pour réduire le letter spacing. Fin de l'effet */
+li a:hover:before {
+    letter-spacing: 5px;
+    opacity: 1;
+    /* pour le faire apparaitre */
+    transition: .8s ease-in-out;
+    /* petit délai pour avoir le temps de voir l'effet */
+}
+
+
+
+
+
+
+/* Frise à l'infini */
+
+.containerFrise {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.frise,
+.frise2 {
+    font-size: 100px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: -1px 1px 2px #F26351, 0 1px 0 #F26351, -1px 0 0 #F26351, 0 -1px 0 #F26351;
+    font-family: 'Concert One';
+    white-space: nowrap;
+    animation: frise 15s linear infinite;
+}
+
+@keyframes frise {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50.5%);
+    }
+}
+
+.pamp {
+    color: #F26351;
+}
+
+
+.frise2 {
+    animation: frise2 15s linear infinite;
+}
+
+@keyframes frise2 {
+    from {
+        transform: translateX(-50.5%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+/* Mise en fromes des 3 chapitres */
+
+#exposants,
+#animations,
+#reservations {
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* les titres des trois parties */
+h2 {
+    font-size: 7vw;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: -3px 5px 2px #F26351, 0 3px 0 #F26351, -1px 0 0 #F26351, 0 -1px 0 #F26351;
+    letter-spacing: .5em;
+    text-align: center;
+}
+
+
+
+/* Section des exposants et animations - les cartes */
+.containCarte {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+
+.carte {
+    position: relative;
+    max-width: 400px;
+    height: 200px;
+    background-color: #FAB471;
+    border-radius: 4px;
+    margin: 10vh 3vw;
+    display: flex;
+    flex-direction: column;
+    transition: .3s ease-in-out;
+    flex-wrap: wrap;
+}
+
+.carte:hover {
+    height: 580px;
+}
+
+.anim:hover {
+    height: 680px;
+}
+
+.imgCarte {
+    position: relative;
+    max-width: 300px;
+    height: 100px;
+    top: -50px;
+    left: 12%;
+}
+
+.imgCarte img {
+    width: 300px;
+    height: 210px;
+    border-radius: 4px;
+}
+
+.txtCarte {
+    position: relative;
+    padding: 0 10%;
+    text-align: center;
+    color: #000;
+    flex-wrap: wrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.carte:hover .txtCarte {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 35px;
+    transition-delay: .3s;
+}
+
+.orange {
+    color: #FD4843;
+}
+
+.ajout {
+    font-size: .7em;
+}
+
+
+
+
+
+
+
+
+/* Partie 3 : réservations et contact */
+
+h3 {
+    font-size: 3em;
+    align-self: flex-start;
+}
+
+
+/* uniquement resa */
+.resa {
+    display: flex;
+    /* align-items: flex-start; */
+    width: 90vw;
+}
+
+.tarifs,
+.tabResa {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 10vw;
+}
+
+/* Uniquement les tarifs */
+.tarifs p {
+    color: white;
+}
+
+/* Uniquement le tableau des résa */
+.tabResa {
+    width: 50%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.paiement {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.paiement p {
+    margin-right: 11.5vw;
+    font-size: 1em;
+    color: #F26351;
+    font-weight: 700;
+    color: white;
+}
+
+.paiement button {
+    width: 50px;
+    color: #F26351;
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+}
+
+.moins {
+
+}
+
+.paiement input {
+    width: 50px;
+    border: none;
+    text-align: center;
+}
+
+.tabResa .btnFin {
+    width: 80px;
+    font-size: .8em;
+}
+
+
+/* C:\Users\acann\Desktop\Exo-et-cours-HTML-CSS-JavaScript\Exo\Exo-CSS\CSS-TP-annonce-bouteille */
+
+
+
+
+
+/* Essemble info pratiques et contact */
+.infoContact {
+    display: flex;
+    /* align-items: flex-start; */
+    width: 90vw;
+    padding: 1% 0;
+}
+
+
+/* uniquement info pratiques */
+
+.info,
+.contact {
+    width: 50%;
+    padding-right: 1%;
+}
+
+.info p {
+    color: #fff;
+    padding-bottom: 5%;
+}
+
+.couleur {
+    color: #F26351;
+}
+
+.info.btnFin {
+    width: 220px;
+    font-size: .8em;
+}
+
+/* uniquement contact */
+.contact {
+    padding-left: 1%;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulaire input:not(.btnFin),
+textarea {
+    width: 35vw;
+    line-height: 6vh;
+    padding-top: 5px;
+    font-size: 1.5em;
+    padding-bottom: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #F26351;
+}
+
+textarea {
+    height: 10vh;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+
+.name {
+    margin-top: -30px;
+}
+
+::placeholder {
+    font-family: 'Krona One', sans-serif !important;
+    font-size: .7em;
+    color: white;
+}
+
+.contact .btnFin {
+    font-family: 'Krona One', sans-serif !important;
+    font-size: .8em;
+    width: 150px;
+}
+
+
+
+/* Faire l'onglet des resa + reprendre le formulaire pour animations
++ voir pour reprendre les cube en plus simple
++ les icons de RS
++ Rendre le tout responsive */
+
+
+
+
+
+
+
+
+
+
+
+/* formulaire de contact : https://www.youtube.com/watch?v=wgyvLfXBGdQ */
+
+
+
+.maps iframe {
+    margin: 0;
+    width: 99.8%;
+    max-height: 70vh;
+    display: block;
+}
+
+/* Icons footer : https://www.youtube.com/watch?v=dTSXlDTNvaQ&t=1s */
+
+
+.footer {
+    margin: -4px 0 -8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 50vh;
+    background-color: #F26351;
+    padding: 0 2%;
+}
+
+.mentionsLeg {
+    color: black;
+}
+
+.mentionsLeg a {
+    color: black;
+}
+
+.mentionsLeg a:hover {
+    color: #FAB471;
+}
+
+.reseauxSoc {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reseauxSoc>*>i {
+    font-size: 2em;
+    padding: 2vw;
+}
+
+.reseauxSoc>a {
+    color: black;
+}
+
+.fa:hover {
+    transform: scale(1.5);
+    transform-origin: center;
+    transition: all 1s ease;
+}
+
+.fa-facebook:hover {
+    color: #0676e8;
+}
+
+.fa-instagram:hover {
+    color: #de42d4;
+}
+
+.fa-youtube:hover {
+    color: #fd0000;
+}
+
+.fa-twitter:hover {
+    color: #1d9bf0;
+}
