@@ -6,14 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="\Sitepamplemousse.css">
-    <!-- Font Concert One -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
-    <!-- Font Krona One -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <!-- Icons du footer -->
     <script src="https://kit.fontawesome.com/c544969e79.js" crossorigin="anonymous"></script>
     <title>Pamplemousse : L'Exposition éphémère</title>
@@ -26,7 +18,7 @@
         <div>
             <h1><a href="#"></a>Pamplemousse : L'Exposition éphémère</a></h1>
         </div>
-        <div class="boutonCTA"><a href="#">Reservez ma place</a></div>
+        <div class="boutonCTA"><a href="#resa">Reservez ma place</a></div>
         <div class="loupe">
             <input type="text" placeholder="Recherche...">
             <a href="#">
@@ -63,34 +55,34 @@
         <div class="date">
             <!-- définition les colonnes donc les 4 cubes chiffre -->
             <!-- Première colone de chiffre donc 0022 -->
-            <div class="chiffre" style="--j:1;">
+            <div class="chiffre" style="--colonne:0;">
                 <!-- Découpons les colonnes en ligne et donc chaque faces de chaque cube en span -->
-                <span style="--i:0">0</span>
-                <span style="--i:1">0</span>
-                <span style="--i:2">2</span>
-                <span style="--i:3">2</span>
+                <span style="--case:0">0</span>
+                <span style="--case:1">0</span>
+                <span style="--case:2">2</span>
+                <span style="--case:3">2</span>
             </div>
             <!-- deuxième colone donc 9900 -->
-            <div class="chiffre" style="--j:2;">
-                <span style="--i:0">9</span>
-                <span style="--i:1">9</span>
-                <span style="--i:2">0</span>
-                <span style="--i:3">0</span>
+            <div class="chiffre" style="--colonne:1;">
+                <span style="--case:0">9</span>
+                <span style="--case:1">9</span>
+                <span style="--case:2">0</span>
+                <span style="--case:3">0</span>
             </div>
             <!-- troisième colonne, sur les deux dernières colonne et les deux premières lignes, apparaissent les chiffres du mois à mettre en noir -->
             <!-- Mettons les chiffre du mois en noir -->
-            <div class="chiffre" style="--j:3;">
-                <span class="mois" style="--i:0">0</span>
-                <span class="mois" style="--i:1">0</span>
-                <span style="--i:2">2</span>
-                <span style="--i:3">2</span>
+            <div class="chiffre" style="--colonne:2;">
+                <span class="mois" style="--case:0">0</span>
+                <span class="mois" style="--case:1">0</span>
+                <span style="--case:2">2</span>
+                <span style="--case:3">2</span>
             </div>
             <!-- quatrième colonne -->
-            <div class="chiffre" style="--j:4;">
-                <span class="mois" style="--i:0">7</span>
-                <span class="mois" style="--i:1">7</span>
-                <span style="--i:2">2</span>
-                <span style="--i:3">2</span>
+            <div class="chiffre" style="--colonne:3;">
+                <span class="mois" style="--case:0">7</span>
+                <span class="mois" style="--case:1">7</span>
+                <span style="--case:2">2</span>
+                <span style="--case:3">2</span>
             </div>
         </div>
         <div class="menu">
@@ -99,7 +91,7 @@
                 <li><a href="#exposants" data-text="exposants">exposants</a></li>
                 <li><a href="#animations" data-text="animations">animations</a></li>
                 <li><a href="#reservations" data-text="Réservations & Contact">Réservations<br>& Contact</a></li>
-                <!-- On met des data-text pour les mettre dans les attribut du content du before des liens du menu -->
+                <!-- On met des data-text pour les mettre dans les attributs du content du before des liens du menu -->
             </ul>
         </div>
     </section>
@@ -109,9 +101,8 @@
 
 
     <section class="containerFrise">
-        <div class="frise">
-            <p>Exposition éphémère du <span class="pamp">pamplemousse</span> Exposition éphémère du <span
-                    class="pamp">pamplemousse</span></p>
+        <div class="frise1">
+            <p>Exposition éphémère du <span class="pamp">pamplemousse</span> Exposition éphémère du <span class="pamp">pamplemousse</span> Exposition éphémère du <span class="pamp">pamplemousse</span></p>
         </div>
     </section>
 
@@ -212,23 +203,34 @@
     <section id="reservations">
         <h2>Réservations<br>& Contact</h2>
 
-        <div class="resa">
+        <div id="resa">
             <div class="tarifs">
                 <h3>Réservation :</h3>
                 <p> <span class="couleur">Tarifs adultes (de 10 ans à 64 ans inclus):</span> 15€ *</p>
                 <p>Enfant (-10 ans) et séniors (65 ans et +) : Entrée gratuite sur présentation d'un justificatif.</p>
                 <p class="ajout">* Réduction : Réservez votre place avant le 8 juillet 2022 pour bénéficier d’un tarif préférenciel :
                 <span class="couleur">10€, au lieu de 15€.</span></p>
-             </div>
-
-            <div class="tabResa">
+                
                 <div class="paiement">
-                    <p>Nombre de places adultes :</p>
-                    <button class="moins" type="button" name="button">-</button>
-                    <input type="number" name="" value="" placeholder="1">
-                    <button type="button" name="button">+</button>
+                    
+                    <div class="place">
+                        <p>Nombre de places adultes :</p>
+                        <div class="nombrePlace">
+                            <button type="button" name="button" class="moins">-</button>
+                            <input type="number" placeholder="0" min="0">
+                            <button type="button" name="button" class="plus">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="prixTotal">
+                        <p>Prix total :</p>
+                        <div class="euros"><input type="number" placeholder="--" min="0"><p>€</p></div>
+                    </div>
+                    
+                    <div class="btnFinCT"><a class="btnFin" href="#">Payer</a></div>
+                
                 </div>
-                <div class="btnFinCT"><a class="btnFin" href="#">Payer</a></div>
+                
             </div>
         </div>
 
@@ -243,13 +245,25 @@
             </div>
             <div class="contact">
                 <h3>Contact :</h3>
-                <div class="formulaire">
-                    <input class="name" type="text" name="Name" placeholder="Nom / Prénom" required>
-                    <input class="email" type="email" name="Email" placeholder="Mail" required>
-                    <input class="objet" type="text" name="object" placeholder="Objet" required>
-                    <textarea class="placeholder" placeholder="Message" required></textarea>
-                </div>
-                <div class="btnFinCT"><input class="btnFin" type="submit" value="Envoyer"></div>
+                <form action="" method="get">
+                    <label for="" class="nom">
+                        <input class="name" type="text" name="Name" placeholder="" required>
+                        <span>Nom / Prénom</span>
+                    </label>
+                    <label for="" class="adMail">
+                        <input class="email" type="email" name="Email" placeholder="" required>
+                        <span>Mail</span>
+                    </label>
+                    <label for="" class="obj">
+                        <input class="objet" type="text" name="object" placeholder="" required>
+                        <span>Objet du message</span>
+                    </label>
+                    <label for="" class="msg">
+                        <textarea class="zoneMessage" placeholder="" required></textarea>
+                        <span>Votre message</span>
+                    </label>
+                    <div class="btnFinCT"><input class="btnFin" type="submit" value="Envoyer"></div>
+                </form>
             </div>
         </div>
     </section>
@@ -278,6 +292,7 @@
             <a href="#"><i class="fa fa-youtube"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
         </div>
+        <script src="Sitepamplemousse.js"></script>
     </section>
 </body>
 

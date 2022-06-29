@@ -1,815 +1,823 @@
 /* Police */
 
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 
 /* Mise-en-page */
-html {
-    margin: -8px;
-    padding: 0;
-}
-
+html,
 body {
-    background-color: #000;
-    font-family: 'Krona One', sans-serif !important;
+  background-color: #000;
+  font-family: "Krona One", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
 }
 
 a {
-    text-decoration: none;
-    color: #F26351;
+  text-decoration: none;
+  color: #f26351;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    color: #FD4843;
-    font-family: 'Concert One' !important;
-    text-transform: uppercase;
+  color: #fd4843;
+  font-family: "Concert One" !important;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
 }
 
 h1:hover,
 .fa-magnifying-glass:hover {
-    color: #FAB471;
+  color: #fab471;
 }
 
 .btnFinCT {
-    background-color: #F26351;
-    border-radius: 30px;
-    display: inline-block;
-    margin: 3%;
+  background-color: #f26351;
+  border-radius: 30px;
+  display: inline-block;
+  margin: 3%;
 }
 
 .btnFin {
-    display: inline-block;
-    border: solid 1px #F26351;
-    border-radius: 30px;
-    background-color: #FAB471;
-    padding: 10px 30px;
-    color: black;
-    text-decoration: none;
-    text-align: center;
-    font-size: .8em;
-    transform: translate(-10px, -10px);
-    transition: all .3s;
-    position: relative;
+  display: block;
+  border: solid 1px #f26351;
+  border-radius: 30px;
+  background-color: #fab471;
+  padding: 10px 30px;
+  color: black;
+  font-weight: 500;
+  font-family: "Krona One", sans-serif !important;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.8em;
+  transform: translate(-10px, -10px);
+  transition: all 0.3s;
+  position: relative;
 }
 
 .btnFin:hover {
-    transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  letter-spacing: 1.5px;
+  color: white;
 }
-
-
-
-
-
-
-
 
 /* Header encart titre  */
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 8vh;
-    padding: 0 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  padding: 0 2%;
 }
 
 h1 {
-    font-size: 3vw;
+  font-size: 3vw;
 }
 
-
-/* Ancien bouton : */
-/* .boutonCTA {
-    background-color: #FD4843;
-    color: white;
-    text-decoration: none;
-    text-transform: capitalize;
-    font-size: 1.3vw;
-    padding: 1vh 2vw;
-    border: solid 1% #FD4843;
-    border-radius: 50px;
-    text-align: center;
-} */
-
-/* .boutonCTA:hover {
-    background-color: #FAB471;
-    color: #FD4843;
-} */
-
 .boutonCTA {
-    position: relative;
-    width: 20vw;
-    height: 3em;
+  position: relative;
+  width: 20vw;
+  height: 3em;
 }
 
 .boutonCTA a {
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    font-size: 1.4vw;
-    padding: 0 2%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #4d4a4969;
-    box-shadow: 0 8px 20px #f2645181;
-    border-top: 2px solid #f26451a6;
-    border-bottom: 1px solid #f26451a6;
-    border-radius: 30px;
-    /* pour le blur du backgroung pour faire du flou sur le before : */
-    backdrop-filter: blur(10px);
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  font-size: 1.4vw;
+  padding: 0 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4d4a4969;
+  box-shadow: 0 8px 20px #f2645181;
+  border-top: 2px solid #f26451a6;
+  border-bottom: 1px solid #f26451a6;
+  border-radius: 30px;
+  /* pour le blur du backgroung pour faire du flou sur le before : */
+  backdrop-filter: blur(10px);
 }
 
 .boutonCTA:hover a {
-    position: absolute;
-    color: #fab371d0;
-    text-align: center;
-    transition-delay: .15s;
-    letter-spacing: 1.3px;
-    transition: .3s ease-in-out .1s;
+  position: absolute;
+  color: #fab371d0;
+  text-align: center;
+  transition-delay: 0.15s;
+  letter-spacing: 1.3px;
+  transition: 0.3s ease-in-out 0.1s;
 }
 
 /* L'effet en dessous du before */
 .boutonCTA:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 30%;
-    height: 30%;
-    background-color: #f26451d3;
-    border-radius: 50%;
-    transition: .3s ease-in-out .1s;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 30%;
+  height: 30%;
+  background-color: #f26451d3;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out 0.1s;
 }
 
 .boutonCTA:hover:before {
-    bottom: 10px;
-    height: 50%;
-    width: 85%;
-    transition: .5s;
+  bottom: 10px;
+  height: 50%;
+  width: 85%;
+  transition: 0.5s;
 }
-
 
 /* Bouton de recherche */
 
 .loupe {
-    height: 2.5em;
-    background-color: #4d4a4969;
-    box-shadow: 0 8px 20px #f2645181;
-    border-top: 2px solid #f26451a6;
-    border-bottom: 1px solid #f26451a6;
-    border-radius: 30px;
-    border-radius: 30px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+  height: 2.5em;
+  background-color: #4d4a4969;
+  box-shadow: 0 8px 20px #f2645181;
+  border-top: 2px solid #f26451a6;
+  border-bottom: 1px solid #f26451a6;
+  border-radius: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
-.loupe>a {
-    color: #F26351;
-    float: right;
-    width: 3vw;
-    padding-right: .3vw;
-    display: flex;
-    justify-content: center;
-    /* transition: .4s; */
+.loupe > a {
+  color: #f26351;
+  float: right;
+  width: 3vw;
+  padding-right: 0.3vw;
+  display: flex;
+  justify-content: center;
 }
 
 input {
-    width: 0;
-    border: none;
-    outline: none;
-    /* pour supprimer les bordures qui apparaissent quand on clique sur le champs de recherche pour rentrer ses données. */
-    background: none;
-    font-size: 1em;
-    transition: .5s ease-in-out;
+  width: 0;
+  border: none;
+  outline: none;
+  /* pour supprimer les bordures qui apparaissent quand on clique sur le champs de recherche pour rentrer ses données. */
+  background: none;
+  font-size: 1em;
+  transition: 0.5s ease-in-out;
 }
 
-.loupe:hover>input {
-    width: 7vw;
-    padding-left: 8%;
+.loupe:hover > input {
+  width: 7vw;
+  padding-left: 8%;
 }
 
 .loupe i:hover {
-    color: #F26351;
+  color: #f26351;
 }
-
-
-
-
-
-
-
-
-
 
 /* section 1: vidéo */
 .accueil {
-    margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .video {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
 }
 
 .rectangle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.532);
-    color: #FAB471;
-    display: grid;
-    align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.532);
+  color: #fab471;
+  display: grid;
+  align-items: center;
 }
 
 .rectangle p,
 .rectancgle div {
-    font-size: 2vw;
-    text-align: center;
-    font-weight: 600;
-    padding: 0 2%;
-    color: #F26351;
+  font-size: 2vw;
+  text-align: center;
+  font-weight: 600;
+  padding: 0 2%;
+  color: #f26351;
 }
 
 .jaune p {
-    color: #FDE382;
-    height: 1.5vh;
+  color: #fde382;
+  height: 1.5vh;
 }
 
 .barre {
-    position: relative;
+  position: relative;
 }
 
 .barre:after {
-    content: '';
-    position: absolute;
-    background-color: #F26351;
-    height: .4vh;
-    width: 5vw;
-    display: inline-block;
-    right: 18%;
-    transform-origin: left;
-    transform: rotate(160deg);
+  content: "";
+  position: absolute;
+  background-color: #f26351;
+  height: 0.4vh;
+  width: 5vw;
+  display: inline-block;
+  right: 18%;
+  transform-origin: left;
+  transform: rotate(160deg);
 }
-
-
-
-
-
-
-
 
 /* section 2: navigation : date et menu */
 
 .nav {
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+
 
 /* Date */
 
 .date {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 65%;
-    transform-style: preserve-3d;
-    /* Porpriété expérimentale. Permet de mettre dans un espace tridimentionnel et doit être définie sur tous les descendants de l'élément.
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  /* Porpriété expérimentale. Permet de mettre dans un espace tridimentionnel et doit être définie sur tous les descendants de l'élément.
     Indique que les fils de l'éléments, concernés par la mise en forme, doivent être positionnés dans l'espace tridimensionnel. */
-    column-gap: 1vw;
-    /* espace entre les cubes */
-    transform: rotateY(30deg) rotateX(25deg);
-    /* Pour mettre les chiffres sur le coté, de profil */
+  column-gap: 1vw;
+  /* espace entre les cubes */
+  transform: rotateY(30deg) rotateX(25deg);
+  /* Pour mettre les chiffres sur le coté, de profil */
 }
 
 .date .chiffre {
-    position: relative;
-    min-width: 100px;
-    min-height: 100px;
-    transform-style: preserve-3d;
-    transition: 1.7s ease-in-out;
-    transition-delay: calc(.1s * var(--j));
-    /* Animation en décalage .1s par cube (variable j), en décalé */
-    /* Var sur le j car ce sont les chiffres qui bougent */
+  position: relative;
+  min-width: 120px;
+  min-height: 120px;
+  transform-style: preserve-3d;
+  transition: 1s ease-in-out;
+  transition-delay: calc(.1s * var(--colonne));
+  /* Animation en décalage grace à 0,1,2,3 .1s par colonne, en décalé */
+  /* Var sur --colonne car ce sont les colonnes qui bougent */
 }
 
+
 .chiffre span {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#FAB471, #F26351);
-    /* 1er partie du cube, la face est faite avec la taille et la couleur */
-    border: solid .5px #FAB471;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4em;
-    color: #fff;
-    transform-style: preserve-3d;
-    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
-    /* 2eme partie : le cube est fait */
-    /* Var sur le i car ce sont les spans qui bougent */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#fab471, #f26351);
+  /* 1er partie du cube, la face est faite avec la taille et la couleur */
+  border: solid 0.5px #fab471;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  color: #fff;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(90deg * var(--case))) translateZ(60px);
+  /* 2eme partie : le cube est fait */
+  /* Var sur le case car ce sont les spans qui bougent */
 }
 
 /* animation simple au hover  */
 .date:hover .chiffre {
-    transform: rotateX(540deg);
-    transform-style: preserve-3d;
-    /* Attention, le nombre de degré est important pour tomber sur les bons chiffre.
+  transform: rotateX(180deg);
+  transform-style: preserve-3d;
+  /* Attention, le nombre de degré est important pour tomber sur les bons chiffre.
     Si 360deg, on retombe sur les chiffres de bas, nous on veut la date donc on va le faire tourner un peu plus loin,
     soit avec 90deg de plus. */
 }
 
 .date .chiffre:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: solid .5px #FAB471;
-    background: linear-gradient(#F26351, #FAB471);
-    transform-origin: left;
-    transform: rotateY(90deg) translateX(-50%);
-    /* 2ème étape du cube : Finition du cube (les cotés) */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: solid 0.5px #fab471;
+  background: linear-gradient(#f26351, #fab471);
+  transform-origin: left;
+  transform: rotateY(90deg) translateX(-50%);
+  /* 2ème étape du cube : Finition du cube (les cotés) */
 }
 
 .chiffre .mois {
-    color: #000;
+  color: #000;
 }
+
 
 
 /* Menu */
 
 .menu {
-    position: relative;
-    width: 45%;
-    min-height: 70vh;
-    padding-right: 2%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  position: relative;
+  width: 50%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 ul {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu li {
-    list-style: none;
+  list-style: none;
 }
 
 .menu a {
-    position: relative;
-    display: block;
-    text-transform: uppercase;
-    font-size: 3vw;
-    margin: 5% 0;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  font-size: 3vw;
+  margin: 5% 0;
 }
 
 li a:hover {
-    transform: translateY(-20px);
-    color: rgb(15, 15, 15);
-    /* pour faire presque disparaitre le titre au hover */
-    transition: .4s ease-in-out;
+  transform: translateY(-20px);
+  color: rgb(15, 15, 15);
+  /* pour faire presque disparaitre le titre au hover */
+  transition: 0.4s ease-in-out;
 }
 
 li a:before {
-    content: attr(data-text);
-    position: absolute;
-    bottom: -20px;
-    /* pointer-events: none; */
-    /* z-index: 1; */
-    font-size: 1vw;
-    color: #FAB471;
-    letter-spacing: 100px;
-    opacity: 0;
-    /* Pour cache les text en before */
-    transition: .6s ease-in-out;
-    text-shadow: 0 0 10px #F26351, 0 0 50px #F26351, 0 0 80px #F26351;
-    /* Pour différents angles */
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  font-size: 1vw;
+  color: #fab471;
+  letter-spacing: 100px;
+  opacity: 0;
+  /* Pour cacher les textes en before */
+  transition: 0.6s ease-in-out;
+  text-shadow: 0 0 10px #f26351, 0 0 50px #f26351, 0 0 80px #f26351;
+  /* Pour différents angles */
 }
 
 /* On change le before quand on passe en hover sur a pour réduire le letter spacing. Fin de l'effet */
 li a:hover:before {
-    letter-spacing: 5px;
-    opacity: 1;
-    /* pour le faire apparaitre */
-    transition: .8s ease-in-out;
-    /* petit délai pour avoir le temps de voir l'effet */
+  letter-spacing: 5px;
+  opacity: 1;
+  /* pour le faire apparaitre */
+  transition: 0.8s ease-in-out;
+  /* petit délai pour avoir le temps de voir l'effet */
 }
-
-
-
-
-
 
 /* Frise à l'infini */
 
 .containerFrise {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
 }
 
-.frise,
+.frise1,
 .frise2 {
-    font-size: 100px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: black;
-    text-shadow: -1px 1px 2px #F26351, 0 1px 0 #F26351, -1px 0 0 #F26351, 0 -1px 0 #F26351;
-    font-family: 'Concert One';
-    white-space: nowrap;
-    animation: frise 15s linear infinite;
-}
-
-@keyframes frise {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50.5%);
-    }
+  font-size: 100px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: black;
+  text-shadow: -1px 1px 2px #f26351, 0 1px 0 #f26351, -1px 0 0 #f26351,
+    0 -1px 0 #f26351;
+  font-family: "Concert One";
+  white-space: nowrap;
 }
 
 .pamp {
-    color: #F26351;
+  color: #f26351;
 }
 
+/* .frise1 {
+  animation: frise1 11s linear infinite;
+}
+
+@keyframes frise1 {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-45%);
+  }
+}
+
+.pamp {
+  color: #f26351;
+}
 
 .frise2 {
-    animation: frise2 15s linear infinite;
+  animation: frise2 11s linear infinite;
 }
 
 @keyframes frise2 {
-    from {
-        transform: translateX(-50.5%);
-    }
+  from {
+    transform: translateX(-45%);
+  }
 
-    to {
-        transform: translateX(0);
-    }
-}
+  to {
+    transform: translateX(0);
+  }
+} */
 
-
-
-
-
-
-
-/* Mise en fromes des 3 chapitres */
+/* Mise-en-forme des sections */
 
 #exposants,
 #animations,
-#reservations {
-    padding: 2vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#reservation
+.containerFrise {
+  width: 100%;
 }
+
 
 /* les titres des trois parties */
 h2 {
-    font-size: 7vw;
-    text-transform: uppercase;
-    color: black;
-    text-shadow: -3px 5px 2px #F26351, 0 3px 0 #F26351, -1px 0 0 #F26351, 0 -1px 0 #F26351;
-    letter-spacing: .5em;
-    text-align: center;
+  font-size: 7vw;
+  text-transform: uppercase;
+  color: black;
+  text-shadow: -3px 5px 2px #f26351, 0 3px 0 #f26351, -1px 0 0 #f26351,
+    0 -1px 0 #f26351;
+  letter-spacing: 0.5em;
+  text-align: center;
 }
-
-
 
 /* Section des exposants et animations - les cartes */
 .containCarte {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .carte {
-    position: relative;
-    max-width: 400px;
-    height: 200px;
-    background-color: #FAB471;
-    border-radius: 4px;
-    margin: 10vh 3vw;
-    display: flex;
-    flex-direction: column;
-    transition: .3s ease-in-out;
-    flex-wrap: wrap;
+  position: relative;
+  max-width: 400px;
+  height: 300px;
+  background-color: #fab471;
+  border-radius: 4px;
+  margin: 10vh 3vw;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+  flex-wrap: wrap;
 }
 
 .carte:hover {
-    height: 580px;
+  height: 630px;
 }
 
 .anim:hover {
-    height: 680px;
+  height: 720px;
 }
 
 .imgCarte {
-    position: relative;
-    max-width: 300px;
-    height: 100px;
-    top: -50px;
-    left: 12%;
+  position: relative;
+  max-width: 300px;
+  height: 100px;
+  top: -40px;
+  left: 12%;
+  z-index: 1;
 }
 
 .imgCarte img {
-    width: 300px;
-    height: 210px;
-    border-radius: 4px;
+  width: 310px;
+  height: 250px;
+  border-radius: 4px;
 }
 
 .txtCarte {
-    position: relative;
-    padding: 0 10%;
-    text-align: center;
-    color: #000;
-    flex-wrap: wrap;
-    visibility: hidden;
-    opacity: 0;
-    transition: .3s ease-in-out;
+  position: relative;
+  margin-top: -300px;
+  padding: 0 30px;
+  text-align: center;
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .carte:hover .txtCarte {
-    visibility: visible;
-    opacity: 1;
-    margin-top: 35px;
-    transition-delay: .3s;
+  visibility: visible;
+  opacity: 1;
+  margin-top: 100px;
+  transition-delay: 0.3s;
+  overflow: hidden;
 }
 
 .orange {
-    color: #FD4843;
+  color: #fd4843;
 }
 
 .ajout {
-    font-size: .7em;
+  font-size: 0.7em;
 }
-
-
-
-
-
-
-
 
 /* Partie 3 : réservations et contact */
 
 h3 {
-    font-size: 3em;
-    align-self: flex-start;
+  font-size: 3em;
 }
-
 
 /* uniquement resa */
-.resa {
-    display: flex;
-    /* align-items: flex-start; */
-    width: 90vw;
-}
-
-.tarifs,
-.tabResa {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding-right: 10vw;
-}
-
-/* Uniquement les tarifs */
-.tarifs p {
-    color: white;
-}
-
-/* Uniquement le tableau des résa */
-.tabResa {
-    width: 50%;
-    align-items: center;
-    justify-content: flex-end;
+#resa {
+width: 100%;
+display: flex;
+justify-content: center;
 }
 
 .paiement {
-    display: flex;
-    justify-content: flex-end;
+  font-size: 1.2em;
 }
 
-.paiement p {
-    margin-right: 11.5vw;
-    font-size: 1em;
-    color: #F26351;
-    font-weight: 700;
-    color: white;
+.tarifs .ajout {
+  margin-bottom: 4em;
+  font-size: 0.8em;
+  line-height: 30px;
 }
 
-.paiement button {
-    width: 50px;
-    color: #F26351;
-    font-size: 2em;
-    background-color: transparent;
-    border: none;
+.tarifs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarifs p {
+  color: white;
+}
+
+.paiement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.place,
+.prixTotal {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: white;
+}
+
+.plus,
+.moins {
+  width: 50px;
+  color: #f26351;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
 }
 
 .moins {
-
+  font-size: 40px;
 }
 
-.paiement input {
-    width: 50px;
-    border: none;
-    text-align: center;
+.nombrePlace input,
+.prixTotal input {
+  width: 80px;
+  height: 2.5em;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Krona One", sans-serif !important;
+  background-color: #f26351;
+  border-radius: 50px;
+  text-align: center;
 }
 
-.tabResa .btnFin {
-    width: 80px;
-    font-size: .8em;
+.prixTotal input {
+  width: 10vh;
+  display: inline-block;
 }
 
+.nombrePlace input::placeholder,
+.prixTotal input::placeholder {
+  font-size: 14px;
+  color: white;
+  font-family: "Krona One", sans-serif !important;
+}
 
-/* C:\Users\acann\Desktop\Exo-et-cours-HTML-CSS-JavaScript\Exo\Exo-CSS\CSS-TP-annonce-bouteille */
+.euros {
+  margin-left: 20px;
+  display: inline-block;
+}
 
+/* Pour faire disparaitre les fleche automatique de l'input type number */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+input[type=number] {
+  -moz-appearance:textfield;
+}
 
+#resa .btnFinCT {
+  margin-left: 20px;
+}
 
+.tarifs .btnFin {
+  width: 100px;
+}
 
 /* Essemble info pratiques et contact */
 .infoContact {
-    display: flex;
-    /* align-items: flex-start; */
-    width: 90vw;
-    padding: 1% 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw;
 }
-
 
 /* uniquement info pratiques */
 
 .info,
 .contact {
-    width: 50%;
-    padding-right: 1%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .info p {
-    color: #fff;
-    padding-bottom: 5%;
+  color: #fff;
+  padding-bottom: 2%;
+  text-align: center;
 }
 
 .couleur {
-    color: #F26351;
+  color: #f26351;
 }
 
-.info.btnFin {
-    width: 220px;
-    font-size: .8em;
+.info .btnFinCT {
+  margin-left: 20px;
+  width: 280px;
+  align-self: center;
+}
+
+.info .btnFin {
+  width: 220px;
 }
 
 /* uniquement contact */
 .contact {
-    padding-left: 1%;
+  margin-left: 30px;
 }
 
-.formulaire {
-    display: flex;
-    flex-direction: column;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35vw;
+  gap: 15px;
+  margin-top: -15px;
 }
 
-.formulaire input:not(.btnFin),
-textarea {
-    width: 35vw;
-    line-height: 6vh;
-    padding-top: 5px;
-    font-size: 1.5em;
-    padding-bottom: 5px;
-    background: transparent;
-    border: none;
-    border-bottom: solid 1px #F26351;
+label {
+  position: relative;
 }
 
-textarea {
-    height: 10vh;
-    padding-top: 20px;
-    margin-bottom: 15px;
+form input:not(.btnFin),
+form textarea {
+  width: 100%;
+  height: 4vh;
+  padding: 10px;
+  font-size: 1em;
+  background-color: black;
+  border: solid 1px #f26351;
+  border-radius: 10px;
+  outline: none;
+  color: white;
 }
 
-.name {
-    margin-top: -30px;
+form textarea {
+  height: 6vh;
 }
 
-::placeholder {
-    font-family: 'Krona One', sans-serif !important;
-    font-size: .7em;
-    color: white;
+form span {
+  position: absolute;
+  top: 0;
+  padding: 15px;
+  pointer-events: none;
+  font-size: 1.1em;
+  color: #f2645158;
 }
 
-.contact .btnFin {
-    font-family: 'Krona One', sans-serif !important;
-    font-size: .8em;
-    width: 150px;
+.zoneMessage {
+  height: 10vh;
+  resize: vertical;
+}
+
+label input:focus ~ span,
+label textarea:focus ~ span {
+  color: #fab471;
+  transform: translate(50px,-5px);
+  background-color: black;
+  border-left: solid 2px #f26351;
+  border-right: solid 2px #f26351;
+  border-radius: 3px;
+  padding: 0 5px 0;
+  font-size: .7em;
+  transition-duration: .5s;
+}
+
+form .btnFin {
+  width: 130px;
+  cursor: pointer;
+}
+
+form .btnFinCT {
+  width: 130px;
+  align-self: center;
 }
 
 
 
-/* Faire l'onglet des resa + reprendre le formulaire pour animations
-+ voir pour reprendre les cube en plus simple
-+ les icons de RS
-+ Rendre le tout responsive */
-
-
-
-
-
-
-
-
-
-
-
-/* formulaire de contact : https://www.youtube.com/watch?v=wgyvLfXBGdQ */
-
-
-
-.maps iframe {
-    margin: 0;
-    width: 99.8%;
-    max-height: 70vh;
-    display: block;
+/* maps */
+iframe {
+  width: 99.8%;
+  max-height: 70vh;
+  display: block;
 }
 
-/* Icons footer : https://www.youtube.com/watch?v=dTSXlDTNvaQ&t=1s */
 
-
+ /* Footer */
 .footer {
-    margin: -4px 0 -8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-height: 50vh;
-    background-color: #F26351;
-    padding: 0 2%;
+  display: flex;
+  max-height: 50vh;
+  background-color: #f26351;
+  width: 100%;
+}
+
+.mentionsLeg,
+.reseauxSoc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 
 .mentionsLeg {
-    color: black;
+  color: black;
+  font-size: 10px;
 }
 
 .mentionsLeg a {
-    color: black;
+  color: black;
 }
 
 .mentionsLeg a:hover {
-    color: #FAB471;
+  color: #fab471;
 }
 
-.reseauxSoc {
-    display: flex;
-    justify-content: flex-end;
+.reseauxSoc > * > i {
+  font-size: 1.5em;
+  padding: 1.5vw;
 }
 
-.reseauxSoc>*>i {
-    font-size: 2em;
-    padding: 2vw;
-}
-
-.reseauxSoc>a {
-    color: black;
+.reseauxSoc > a {
+  color: black;
 }
 
 .fa:hover {
-    transform: scale(1.5);
-    transform-origin: center;
-    transition: all 1s ease;
+  transform: scale(1.5);
+  transform-origin: center;
+  transition: all 1s ease;
 }
 
 .fa-facebook:hover {
-    color: #0676e8;
+  color: #0676e8;
 }
 
 .fa-instagram:hover {
-    color: #de42d4;
+  color: #de42d4;
 }
 
 .fa-youtube:hover {
-    color: #fd0000;
+  color: #fd0000;
 }
 
 .fa-twitter:hover {
-    color: #1d9bf0;
+  color: #1d9bf0;
 }
