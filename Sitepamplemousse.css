@@ -243,6 +243,25 @@ input {
   flex-wrap: wrap;
 }
 
+/* bouton revenir en haut */
+.retour {
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+  margin: 5px 50px 20px 0;
+}
+
+.fa-up-long {
+  color: #F27A6A;
+}
+
+.up {
+  font-size: 10px;
+  color: #F27A6A;
+  display: inline;
+}
+
+
 /* Date */
 
 .date {
@@ -759,23 +778,7 @@ form .btnFinCT {
   align-self: center;
 }
 
-/* bouton revenir en haut */
-.haut {
-  display: flex;
-  justify-content: flex-end;
-  text-align: end;
-  margin: 5px 50px 20px 0;
-}
 
-.fa-up-long {
-  color: #F27A6A;
-}
-
-.up {
-  font-size: 10px;
-  color: #F27A6A;
-  display: inline;
-}
 
 /* maps */
 iframe {
