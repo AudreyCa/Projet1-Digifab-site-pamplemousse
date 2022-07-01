@@ -86,6 +86,7 @@ h1 {
   position: relative;
   width: 300px;
   height: 65px;
+  flex-wrap: wrap;
 }
 
 .boutonCTA a {
@@ -97,6 +98,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: #4d4a4969;
   box-shadow: 0 8px 20px #f2645181;
   border-top: 2px solid #f26451a6;
@@ -146,13 +148,20 @@ h1 {
   text-align: center;
  }
 
+ .boutonCTA {
+display: flex;
+width: 50%;
+justify-content: center;
+ }
+
  .boutonCTA a {
-  width: 50%;
+  width: 80%;
   height: 50%;
   font-size: 10px;
   bottom: 33%;
-  left: 23%;
+  left: 9%;
 }
+
 .boutonCTA:before {
   left: 50%;
   bottom: 23%;
@@ -165,10 +174,6 @@ h1 {
   height: 45%;
   width: 40%;
   transition: 0.5s;
-}
-.loupe {
-margin-right: 100px;
-margin-bottom: 10px;
 }
 
 }
@@ -189,6 +194,7 @@ margin-bottom: 10px;
   align-items: center;
   justify-content: center;
   transition: .5s ease-in-out;
+  flex-wrap: wrap;
 }
 
 .loupe.active {
@@ -221,7 +227,25 @@ margin-bottom: 10px;
   transition: .5s ease-in-out;
 }
 
+@media screen and (max-width: 800px) {
+  .loupe {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
 
+  .loupe.active {
+    width: 160px;
+  }
+
+  .loupe input.active {
+    width: 100px;
+    padding-left: 1px;
+  }
+}
 
 
 /* section 1: vidéo */
@@ -259,14 +283,6 @@ margin-bottom: 10px;
   text-shadow:-1px 1px 1px white,-1px 1px .5px white;
 }
 
-
-@media screen and (max-width: 800px) {
-  .rectangle p,
-  .rectancgle div {
-    font-size: 1.5vw;
-  }
-}
-
 .jaune p {
   color: #fde382;
   text-shadow:-1px 1px 1px white,-1px 1px .5px white;
@@ -289,6 +305,50 @@ margin-bottom: 10px;
   transform-origin: left;
   transform: rotate(160deg);
 }
+
+@media screen and (max-width: 800px) {
+  .rectangle p,
+  .rectancgle div {
+    font-size: 1.5vw;
+  }
+
+  .rectangle {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 45%;
+  }
+  
+  .rectangle p,
+  .rectancgle div {
+    line-height: 1%;
+    font-size: 11px;
+    text-align: center;
+    font-weight: 300;
+    color: #f26351;
+    text-shadow:-1px 1px 1px white,-1px 1px .5px white;
+  }
+
+  .barre {
+    margin-top: 10px;
+   }
+   
+   .barre:after {
+     content: "";
+     position: absolute;
+     background-color: #f26351;
+     height: 0.4vh;
+     width: 5vw;
+     display: inline-block;
+     right: 45%;
+     bottom: 70%;
+     transform-origin: left;
+     transform: rotate(160deg);
+   }
+
+}
+
+
 
 /* section 2: navigation : date et menu */
 
@@ -392,14 +452,22 @@ margin-bottom: 10px;
 }
 
 @media screen and (max-width: 800px) {
+  .date {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 250px;
+    margin-top: 60px;
+    margin-bottom: -60px;
+  }
+
   .date .chiffre {
-    min-width: 50px;
-    min-height: 50px;
+    min-width: 60px;
+    min-height: 60px;
   }
 
   .chiffre span {
     font-size: 2em;
-    transform: rotateX(calc(90deg * var(--case))) translateZ(25px);
+    transform: rotateX(calc(90deg * var(--case))) translateZ(30px);
   }
 
 }
@@ -413,6 +481,7 @@ margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   overflow: hidden;
 }
 
@@ -465,6 +534,26 @@ li a:hover:before {
   /* petit délai pour avoir le temps de voir l'effet */
 }
 
+@media screen and (max-width: 800px) {
+  .menu {
+    width: 100%;
+    height: 200px;
+  }
+
+  .menu a {
+    font-size: 30px;
+  }
+
+  li a:before {
+    font-size: 11px;
+  }
+
+}
+
+
+
+
+
 /* Frise à l'infini */
 
 .containerFrise {
@@ -485,6 +574,15 @@ li a:hover:before {
   white-space: nowrap;
 }
 
+@media screen and (max-width: 800px) {
+  .frise {
+    font-size: 70px;
+  }
+  .containerFrise {
+    margin-top: -50px;
+  }
+
+}
 
 
 /* Mise-en-forme des sections */
@@ -506,6 +604,14 @@ h2 {
   color: transparent;
   letter-spacing: 0.5em;
   text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
 }
 
 /* Section des exposants et animations - les cartes */
@@ -546,6 +652,13 @@ h2 {
   top: -40px;
   left: 12%;
   z-index: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .imgCarte {
+    left: 5%;
+  }
+
 }
 
 .imgCarte img {
@@ -634,6 +747,7 @@ h3 {
 .nombrePlace {
   position: relative;
 }
+
 
 .place,
 .prixTotal {
@@ -748,6 +862,49 @@ input[type="number"] {
   width: 100px;
 }
 
+@media screen and (max-width: 800px) {
+  .tarifs {
+    width: 90%;
+  }
+  
+  .paiement {
+   width: 50%;
+  }
+ 
+  .place {
+   display: flex;
+   flex-wrap: wrap;
+  }
+ 
+  .place p {
+   width: 200px;
+   flex-wrap: wrap;
+ margin-left: 20px;
+ }
+ 
+ .nombrePlace {
+   flex-wrap: wrap;
+   width: 100%;
+   bottom: -80%;
+   left: 30%;
+ }
+ 
+ .prixTotal {
+  margin-top: 50px;
+  width: 300px;
+}
+
+.euros {
+  margin-left: -15px;
+}
+
+.tarifs .btnFinCT {
+  margin-top: 20px;
+}
+
+ }
+
+
 /* Essemble info pratiques et contact */
 .infoContact {
   display: flex;
@@ -769,17 +926,6 @@ input[type="number"] {
 
 .info {
   text-align: center;
-}
-
-@media screen and (max-width: 800px) {
-  .tarifs {
-    width: 90%;
-  }
-  
-  .info {
-    width: 100%;
-  }
-
 }
 
 .info p {
@@ -810,6 +956,29 @@ input[type="number"] {
 .info .btnFin {
   width: 220px;
 }
+
+@media screen and (max-width: 800px) {
+  .infoContact {
+    width: 100%;
+    flex-wrap: wrap;
+  }  
+  
+  .info {
+      width:100%;
+      font-size: 12px;
+    }
+
+    .info p {
+      width: 300px;
+    }
+
+    .info p:nth-child(5) {
+      padding-bottom: 20px;
+    }
+
+}
+
+
 
 /* uniquement contact */
 .contact {
