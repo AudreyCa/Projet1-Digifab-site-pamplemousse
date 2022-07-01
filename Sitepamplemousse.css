@@ -4,13 +4,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 
 /* Mise-en-page */
-html,
 body {
   background-color: #000;
-  font-family: "Krona One", sans-serif !important;
-  margin: 0;
-  padding: 0;
-  width: 100vw;
+  font-family: "Krona One", sans-serif;
+  margin: 0 auto;
 }
 
 a {
@@ -23,7 +20,7 @@ h2,
 h3,
 h4 {
   color: #fd4843;
-  font-family: "Concert One" !important;
+  font-family: "Concert One";
   text-transform: uppercase;
 }
 
@@ -51,7 +48,7 @@ h1:hover,
   padding: 10px 30px;
   color: black;
   font-weight: 500;
-  font-family: "Krona One", sans-serif !important;
+  font-family: "Krona One", sans-serif;
   text-decoration: none;
   text-align: center;
   font-size: 0.8em;
@@ -66,6 +63,9 @@ h1:hover,
   color: white;
 }
 
+
+
+
 /* Header encart titre  */
 
 .header {
@@ -73,24 +73,26 @@ h1:hover,
   justify-content: space-between;
   align-items: center;
   width: 96%;
-  padding: 0 2%;
+  padding: 1% 2%;
+  flex-wrap: wrap;
 }
 
 h1 {
   font-size: 3vw;
+  flex-wrap: wrap;
 }
 
 .boutonCTA {
   position: relative;
-  width: 20vw;
-  height: 3em;
+  width: 300px;
+  height: 65px;
 }
 
 .boutonCTA a {
   position: absolute;
   width: 100%;
   height: 80%;
-  font-size: 1.4vw;
+  font-size: 20px;
   padding: 0 2%;
   display: flex;
   justify-content: center;
@@ -101,7 +103,7 @@ h1 {
   border-bottom: 1px solid #f26451a6;
   border-radius: 30px;
   /* pour le blur du backgroung pour faire du flou sur le before : */
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
 }
 
 .boutonCTA:hover a {
@@ -129,15 +131,53 @@ h1 {
 
 .boutonCTA:hover:before {
   bottom: 10px;
-  height: 50%;
-  width: 85%;
+  height: 70%;
+  width: 90%;
   transition: 0.5s;
 }
 
-/* Bouton de recherche */
+@media screen and (max-width: 800px) {
+.titreh1 {
+  width: 100%;
+}
+ 
+  h1 {
+  font-size : 30px;
+  text-align: center;
+ }
+
+ .boutonCTA a {
+  width: 50%;
+  height: 50%;
+  font-size: 10px;
+  bottom: 33%;
+  left: 23%;
+}
+.boutonCTA:before {
+  left: 50%;
+  bottom: 23%;
+  width: 20%;
+  height: 20%;
+}
+
+.boutonCTA:hover:before {
+  bottom: 25px;
+  height: 45%;
+  width: 40%;
+  transition: 0.5s;
+}
+.loupe {
+margin-right: 100px;
+margin-bottom: 10px;
+}
+
+}
+
+/* loupe : Bouton de recherche */
 
 .loupe {
-  height: 2.5em;
+  width: 50px;
+  height: 50px;
   background-color: #4d4a4969;
   box-shadow: 0 8px 20px #f2645181;
   border-top: 2px solid #f26451a6;
@@ -147,36 +187,42 @@ h1 {
   cursor: pointer;
   display: flex;
   align-items: center;
-}
-
-.loupe > a {
-  color: #f26351;
-  float: right;
-  width: 3vw;
-  padding-right: 0.3vw;
-  display: flex;
   justify-content: center;
+  transition: .5s ease-in-out;
 }
 
-input {
+.loupe.active {
+  width: 180px;
+  transition: .5s ease-in-out;
+}
+
+.loupe > button {
+  color: #f26351;
+  background: transparent;
+  border: none;
+  float: right;
+  padding-right: 10px;
+}
+
+.loupe input {
   width: 0;
   border: none;
   outline: none;
   /* pour supprimer les bordures qui apparaissent quand on clique sur le champs de recherche pour rentrer ses données. */
   background: none;
   font-size: 1em;
-  transition: 0.5s ease-in-out;
+  transition: .5s ease-in-out;
   color: white;
 }
 
-.loupe:hover > input {
-  width: 7vw;
-  padding-left: 8%;
+.loupe input.active {
+  width: 130px;
+  padding-left: 20px;
+  transition: .5s ease-in-out;
 }
 
-.loupe i:hover {
-  color: #f26351;
-}
+
+
 
 /* section 1: vidéo */
 .accueil {
@@ -196,7 +242,7 @@ input {
   right: 0;
   width: 20%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.532);
+  background-color: rgba(0, 0, 0, 0.726);
   color: #fab471;
   display: grid;
   align-items: center;
@@ -204,19 +250,30 @@ input {
 
 .rectangle p,
 .rectancgle div {
+  line-height: 200%;
   font-size: 2vw;
   text-align: center;
   font-weight: 600;
-  padding: 0 2%;
+  padding: 0 10%;
   color: #f26351;
+  text-shadow:-1px 1px 1px white,-1px 1px .5px white;
+}
+
+
+@media screen and (max-width: 800px) {
+  .rectangle p,
+  .rectancgle div {
+    font-size: 1.5vw;
+  }
 }
 
 .jaune p {
   color: #fde382;
-  height: 1.5vh;
+  text-shadow:-1px 1px 1px white,-1px 1px .5px white;
 }
 
 .barre {
+ margin-top: -20px;
   position: relative;
 }
 
@@ -228,6 +285,7 @@ input {
   width: 5vw;
   display: inline-block;
   right: 18%;
+  bottom: 70%;
   transform-origin: left;
   transform: rotate(160deg);
 }
@@ -333,6 +391,19 @@ input {
   color: #000;
 }
 
+@media screen and (max-width: 800px) {
+  .date .chiffre {
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+  .chiffre span {
+    font-size: 2em;
+    transform: rotateX(calc(90deg * var(--case))) translateZ(25px);
+  }
+
+}
+
 /* Menu */
 
 .menu {
@@ -405,7 +476,7 @@ li a:hover:before {
 }
 
 .frise {
-  font-size: 80px;
+  font-size: 100px;
   line-height: .5;
   text-transform: uppercase;
   color: black;
@@ -518,10 +589,15 @@ h3 {
 }
 
 /* uniquement resa */
+#reservation {
+  witdh:100%;
+}
+
 #resa {
   width: 100%;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .paiement {
@@ -594,6 +670,7 @@ h3 {
 .nombrePlace input {
   left: 0;
   bottom: 5px;
+  border: none;
 }
 
 .plus {
@@ -607,7 +684,7 @@ h3 {
   height: 35px;
   color: #fff;
   font-size: 14px;
-  font-family: "Krona One", sans-serif !important;
+  font-family: "Krona One", sans-serif;
   background-color: #f26351;
   border-radius: 50px;
   text-align: center;
@@ -619,15 +696,18 @@ h3 {
 
 .euros input {
   width: 50px;
+  background: transparent;
+  border: none;
   text-align: center;
-  font-family: "Krona One", sans-serif !important;
+  color: white;
+  font-family: "Krona One", sans-serif;
 }
 
 .nombrePlace input::placeholder,
 .prixTotal input::placeholder {
   font-size: 14px;
   color: white;
-  font-family: "Krona One", sans-serif !important;
+  font-family: "Krona One", sans-serif;
 }
 
 .prixTotal input::placeholder {
@@ -684,12 +764,37 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.info {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .tarifs {
+    width: 90%;
+  }
+  
+  .info {
+    width: 100%;
+  }
+
 }
 
 .info p {
   color: #fff;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
   text-align: center;
+  width: 500px;
+}
+
+.info p:nth-child(5) {
+  padding-bottom: 72px;
+}
+
+.info p:nth-child(2) {
+  padding-top: 10px;
 }
 
 .couleur {
@@ -728,13 +833,14 @@ form input:not(.btnFin),
 form textarea {
   width: 100%;
   height: 4vh;
-  padding: 10px;
-  font-size: 1em;
+  padding: 15px;
+  font-size: 13px;
   background-color: black;
   border: solid 1px #f26351;
   border-radius: 10px;
   outline: none;
   color: white;
+  font-family: "Krona One", sans-serif;
 }
 
 form textarea {
@@ -746,7 +852,7 @@ form span {
   top: 0;
   padding: 15px;
   pointer-events: none;
-  font-size: .9em;
+  font-size: 13px;
   color: #f2645158;
 }
 
@@ -755,8 +861,7 @@ form span {
   resize: vertical;
 }
 
-label input:focus ~ span,
-label textarea:focus ~ span {
+form span.active {
   color: #fab471;
   transform: translate(50px, -5px);
   background-color: black;
@@ -778,12 +883,24 @@ form .btnFinCT {
   align-self: center;
 }
 
+@media screen and (max-width: 800px) {
+  .contact {
+    width: 100%;
+  }
+
+  .contact form {
+    width: 70%;
+    margin-left: -50px;
+  }
+  }
+
+
 
 
 /* maps */
 iframe {
   width: 99.8%;
-  max-height: 70vh;
+  max-height: 40vh;
   display: block;
 }
 
@@ -793,6 +910,7 @@ iframe {
   max-height: 50vh;
   background-color: #f26351;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .mentionsLeg,
@@ -801,6 +919,7 @@ iframe {
   justify-content: center;
   align-items: center;
   width: 50%;
+  flex-wrap: wrap;
 }
 
 .mentionsLeg {
@@ -846,3 +965,20 @@ iframe {
 .fa-twitter:hover {
   color: #1d9bf0;
 }
+
+@media screen and (max-width: 800px) {
+
+  .mentionsLeg,
+  .reseauxSoc {
+   width: 100%;
+  }
+
+  .mentionsLeg {
+    text-align: center;
+  }
+
+  .reseauxSoc > * > i {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  }
