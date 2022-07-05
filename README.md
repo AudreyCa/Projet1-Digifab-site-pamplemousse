@@ -1,2 +1,3 @@
 # projet-digifab1
-Site de pamplemousse fictif dans le cadre de notre premier projet de création de site web (en individuel).
+
+Premier projet, en individuel, du début de formation basé sur les cours HTML et CSS : Site sur une expo fictive autour du pamplemousse.
