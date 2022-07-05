@@ -3,8 +3,8 @@
 const percentLabel = document.querySelector("#percent");
 const originalTitle = document.title;
 const frise = document.querySelector(".frise");
-let oldpercentage=0;
-let translation = -0.1;
+let oldpercentage = 0;
+let translation = -.1;
 
 window.addEventListener("scroll", () => {
   let scrollTop = window.scrollY;
@@ -13,25 +13,22 @@ window.addEventListener("scroll", () => {
   let scrollPercent = scrollTop / (docHeight - winHeight);
   let scrollPercentRounded = Math.round(scrollPercent * 100);
 
-  if (oldpercentage > scrollPercentRounded){
-  console.log(scrollPercentRounded,translation,frise);
+  if (oldpercentage > scrollPercentRounded) {
+    console.log(scrollPercentRounded, translation, frise);
 
-  translation ++;
-  frise.setAttribute('style','transform:translateX('+translation+'%);') ;
-  } 
+    translation++;
+    frise.setAttribute("style", "transform:translateX(" + translation + "%);");
+  }
 
-  if (oldpercentage < scrollPercentRounded){
-    console.log(scrollPercentRounded,translation,frise);
-  
-    translation --;
-    frise.setAttribute('style','transform:translateX('+translation+'%);') ;
-    }
+  if (oldpercentage < scrollPercentRounded) {
+    console.log(scrollPercentRounded, translation, frise);
+
+    translation--;
+    frise.setAttribute("style", "transform:translateX(" + translation + "%);");
+  }
 
   oldpercentage = scrollPercentRounded;
-
 });
-
-
 
 // Animation paiment
 
@@ -42,63 +39,59 @@ let prixTotalInput = document.querySelector(".total");
 let nombrePlace = 0;
 let prixTotal = 0;
 
-moins.addEventListener('click', function(e) {
-    if (nombrePlace != 0) {
-      nombrePlace --;
-      nombrePlaceInput.value = nombrePlace;
-      prixTotal -= 10;
-      prixTotalInput.value = prixTotal;
-    }
+moins.addEventListener("click", function (e) {
+  if (nombrePlace != 0) {
+    nombrePlace--;
+    nombrePlaceInput.value = nombrePlace;
+    prixTotal -= 10;
+    prixTotalInput.value = prixTotal;
+  }
 });
 
-plus.addEventListener('click', function(e) {
-  nombrePlace ++;
+plus.addEventListener("click", function (e) {
+  nombrePlace++;
   nombrePlaceInput.value = nombrePlace;
   prixTotal += 10;
   prixTotalInput.value = prixTotal;
 });
 
-
-
-// loupe 
+// loupe
 
 let search = document.querySelector(".loupe");
 let loupe = document.querySelector(".loupe button");
 let searchInput = document.querySelector(".loupe input");
 
-loupe.onclick = function() {
+loupe.onclick = function () {
   search.classList.toggle("active");
-  searchInput.classList.toggle("active")
-}
-
-
+  searchInput.classList.toggle("active");
+};
 
 // Formulaire
 
 let spanFormName = document.querySelector(".nom span");
 let inputFormName = document.querySelector(".nom input");
 
-inputFormName.onclick = function() {
+inputFormName.onclick = function () {
   spanFormName.classList.add("active");
-}
+};
 
 let spanFormMail = document.querySelector(".adMail span");
 let inputFormMail = document.querySelector(".adMail input");
 
-inputFormMail.onclick = function() {
+inputFormMail.onclick = function () {
   spanFormMail.classList.add("active");
-}
+};
 
 let spanFormObjet = document.querySelector(".obj span");
 let inputFormObjet = document.querySelector(".obj input");
 
-inputFormObjet.onclick = function() {
+inputFormObjet.onclick = function () {
   spanFormObjet.classList.add("active");
-}
+};
 
 let spanFormMessage = document.querySelector(".msg span");
 let inputFormMessage = document.querySelector(".msg textarea");
 
-inputFormMessage.onclick = function() {
+inputFormMessage.onclick = function () {
   spanFormMessage.classList.add("active");
-}
+};

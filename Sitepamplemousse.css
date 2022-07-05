@@ -198,7 +198,7 @@ justify-content: center;
 }
 
 .loupe.active {
-  width: 180px;
+  width: 190px;
   transition: .5s ease-in-out;
 }
 
@@ -403,7 +403,7 @@ justify-content: center;
   min-height: 120px;
   transform-style: preserve-3d;
   transition: 1s ease-in-out;
-  transition-delay: calc(0.1s * var(--colonne));
+  transition-delay: calc(.1s * var(--colonne));
   /* Animation en décalage grace à 0,1,2,3 .1s par colonne, en décalé */
   /* Var sur --colonne car ce sont les colonnes qui bougent */
 }
