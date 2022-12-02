@@ -1,3 +1,8 @@
-# Projet1-digifab-solo
+# Projet 1 : Site pamplemousse
 
-Premier projet, en individuel, du début de formation basé sur les cours HTML et CSS : Site sur une expo fictive autour du pamplemousse.
+Dans le cadre de ma formation de Concepteur Développeur d'Application chez Digifab, j'ai fait mon premier projet de site en front-end avec HTML et CSS.
+```
+```
+![Image de pamplemousse](https://file1.topsante.com/var/topsante/storage/images/1/3/1/1/1311206/pamplemousse-partenaire-des-autres-aliments-anticancerqu-onc.jpg?alias=exact1024x768_l =300x250)
+```
+```
